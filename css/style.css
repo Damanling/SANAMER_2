@@ -42,12 +42,21 @@ th, td { padding:12px 14px; border:1px solid var(--border); text-align:left; }
 th { background:var(--blue); color:#fff; }
 tbody tr:nth-child(odd) { background:var(--blue-light); }
 tbody tr:nth-child(even) { background:#fff; }
-.contact-form { display:grid; gap:16px; max-width:640px; }
-.form-field { display:grid; gap:6px; }
+.contact-form { display:grid; gap:1px; max-width:640px; }
+.form-field { display:grid; gap:6px; margin-bottom: 16px }
 label { font-weight:700; }
 
 input, textarea, button { font:inherit; }
-input[type="text"], input[type="email"], textarea { width:100%; padding:10px 12px; border:1px solid #91b4cf; border-radius:4px; }
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    border: 1px solid #91b4c7;
+    border-radius: 4px;
+}
 input:focus, textarea:focus { outline:3px solid rgba(31,95,147,.25); border-color:var(--blue); }
 .agreement { display:flex; align-items:flex-start; gap:8px; font-weight:400; }
 .agreement input { margin-top:5px; }
